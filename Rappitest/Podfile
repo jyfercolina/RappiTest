@@ -1,0 +1,11 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '10.0'
+use_frameworks!
+
+target 'Rappitest' do
+    pod 'AlamofireObjectMapper'
+    pod 'RealmSwift'
+    pod 'Kingfisher'
+    pod 'MBProgressHUD'
+    pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift3'
+end
