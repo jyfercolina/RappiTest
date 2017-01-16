@@ -28,6 +28,9 @@ class AppModel: Object {
         self.init()
     }
     
+    override static func primaryKey() -> String? {
+        return "id"
+    }
     
 }
 

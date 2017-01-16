@@ -5,18 +5,73 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AppCollectionViewCell" id="gTV-IL-0wX" customClass="AppCollectionViewCell" customModule="Rappitest" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <rect key="frame" x="0.0" y="0.0" width="95" height="136"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <rect key="frame" x="0.0" y="0.0" width="95" height="136"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2pa-PI-6iG" customClass="SpringImageView" customModule="Spring">
+                        <rect key="frame" x="5" y="5" width="85" height="82"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="2pa-PI-6iG" secondAttribute="height" multiplier="28:27" id="1gV-sy-d6s"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9lG-oO-nOC">
+                        <rect key="frame" x="0.0" y="87" width="95" height="16"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                        <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z2B-nS-vR1">
+                        <rect key="frame" x="0.0" y="103" width="95" height="14"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="11"/>
+                        <color key="textColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OKW-aj-lnP">
+                        <rect key="frame" x="0.0" y="117" width="95" height="14"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
             </view>
+            <color key="backgroundColor" red="0.89727565292564104" green="0.89727565292564104" blue="0.89727565292564104" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="OKW-aj-lnP" secondAttribute="trailing" id="C0u-Nk-D0I"/>
+                <constraint firstItem="OKW-aj-lnP" firstAttribute="top" secondItem="z2B-nS-vR1" secondAttribute="bottom" id="JMK-aQ-GvF"/>
+                <constraint firstItem="z2B-nS-vR1" firstAttribute="top" secondItem="9lG-oO-nOC" secondAttribute="bottom" id="Ocx-IP-Oou"/>
+                <constraint firstAttribute="trailing" secondItem="9lG-oO-nOC" secondAttribute="trailing" id="UAS-Ar-r58"/>
+                <constraint firstAttribute="trailing" secondItem="2pa-PI-6iG" secondAttribute="trailing" constant="5" id="UIt-oC-QUs"/>
+                <constraint firstItem="9lG-oO-nOC" firstAttribute="top" secondItem="2pa-PI-6iG" secondAttribute="bottom" id="YjU-i8-01d"/>
+                <constraint firstItem="z2B-nS-vR1" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="bfg-fm-lUh"/>
+                <constraint firstAttribute="trailing" secondItem="z2B-nS-vR1" secondAttribute="trailing" id="btP-hR-wjJ"/>
+                <constraint firstItem="9lG-oO-nOC" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="gXP-hD-pSU"/>
+                <constraint firstItem="2pa-PI-6iG" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="kXW-mS-n9L"/>
+                <constraint firstItem="OKW-aj-lnP" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="nYD-He-8lI"/>
+                <constraint firstItem="2pa-PI-6iG" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="o6v-Ef-7Sh"/>
+            </constraints>
+            <size key="customSize" width="95" height="136"/>
+            <connections>
+                <outlet property="appImageView" destination="2pa-PI-6iG" id="vXY-ss-hRc"/>
+                <outlet property="artistLabel" destination="z2B-nS-vR1" id="hzX-JX-veD"/>
+                <outlet property="nameLabel" destination="9lG-oO-nOC" id="bO3-mA-0AV"/>
+                <outlet property="priceLabel" destination="OKW-aj-lnP" id="kLd-sI-1Ne"/>
+            </connections>
+            <point key="canvasLocation" x="-68.5" y="-8"/>
         </collectionViewCell>
     </objects>
 </document>

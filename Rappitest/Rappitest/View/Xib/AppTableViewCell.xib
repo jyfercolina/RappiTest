@@ -5,18 +5,99 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AppTableViewCell" id="KGk-i7-Jjw" customClass="AppTableViewCell" customModule="Rappitest" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AppTableViewCell" rowHeight="50" id="KGk-i7-Jjw" customClass="AppTableViewCell" customModule="Rappitest" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="404" height="50"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.94999999999999996" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="404" height="49"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bkf-ec-8Ae">
+                        <rect key="frame" x="63" y="48" width="341" height="1"/>
+                        <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="mAv-G5-rsf"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CxW-h5-GM6" customClass="SpringImageView" customModule="Spring">
+                        <rect key="frame" x="15" y="0.0" width="47" height="47"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="CxW-h5-GM6" secondAttribute="height" multiplier="1:1" id="46X-Hd-fhp"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="4"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="NO"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="autohide" value="NO"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KVT-wA-vsE">
+                        <rect key="frame" x="72" y="26" width="39" height="18"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                        <color key="textColor" red="0.21049679487179485" green="0.21049679487179485" blue="0.21049679487179485" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5x5-IM-AP7">
+                        <rect key="frame" x="72" y="12" width="29" height="14"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="11"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   $0.00   " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j79-0R-Fea">
+                        <rect key="frame" x="348" y="15" width="51" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="xwp-z0-m2r"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="11"/>
+                        <color key="textColor" red="0.85098039215686272" green="0.12941176470588237" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="2"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" red="0.85098039215686272" green="0.12941176470588237" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="CxW-h5-GM6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="1jq-Ez-J9S"/>
+                    <constraint firstItem="j79-0R-Fea" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="KVT-wA-vsE" secondAttribute="trailing" constant="15" id="4Gi-51-eTI"/>
+                    <constraint firstItem="bkf-ec-8Ae" firstAttribute="top" secondItem="CxW-h5-GM6" secondAttribute="bottom" constant="1" id="7xC-pu-JMJ"/>
+                    <constraint firstItem="5x5-IM-AP7" firstAttribute="leading" secondItem="KVT-wA-vsE" secondAttribute="leading" id="CIP-dH-emb"/>
+                    <constraint firstItem="KVT-wA-vsE" firstAttribute="leading" secondItem="CxW-h5-GM6" secondAttribute="trailing" constant="10" id="GDb-ho-25H"/>
+                    <constraint firstItem="KVT-wA-vsE" firstAttribute="top" secondItem="5x5-IM-AP7" secondAttribute="bottom" id="Owf-JP-FGP"/>
+                    <constraint firstItem="KVT-wA-vsE" firstAttribute="bottom" secondItem="CxW-h5-GM6" secondAttribute="bottom" constant="-3" id="SG8-kB-m2n"/>
+                    <constraint firstAttribute="bottom" secondItem="bkf-ec-8Ae" secondAttribute="bottom" id="bzy-S6-rFI"/>
+                    <constraint firstAttribute="trailing" secondItem="j79-0R-Fea" secondAttribute="trailing" constant="5" id="htq-m7-ruI"/>
+                    <constraint firstItem="CxW-h5-GM6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="iwY-Kk-df1"/>
+                    <constraint firstItem="j79-0R-Fea" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="mQN-MK-RPF"/>
+                    <constraint firstAttribute="trailing" secondItem="bkf-ec-8Ae" secondAttribute="trailing" id="reR-ss-fR7"/>
+                    <constraint firstItem="bkf-ec-8Ae" firstAttribute="leading" secondItem="CxW-h5-GM6" secondAttribute="trailing" constant="1" id="vR4-wq-FjY"/>
+                </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="appImageView" destination="CxW-h5-GM6" id="FqC-f5-dFR"/>
+                <outlet property="firstLabel" destination="5x5-IM-AP7" id="xgd-B7-ftR"/>
+                <outlet property="priceLabel" destination="j79-0R-Fea" id="hXb-Rx-o77"/>
+                <outlet property="secondLabel" destination="KVT-wA-vsE" id="7d2-dq-7OV"/>
+            </connections>
+            <point key="canvasLocation" x="-231" y="105"/>
         </tableViewCell>
     </objects>
 </document>
