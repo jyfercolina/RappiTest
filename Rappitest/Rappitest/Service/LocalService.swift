@@ -2,7 +2,7 @@
 //  LocalService.swift
 //  Rappitest
 //
-//  Created by Momentum Lab 7 on 1/13/17.
+//  Created by Jyferson Colina on 1/13/17.
 //
 //
 
@@ -18,6 +18,17 @@ class LocalDataService {
             try realm.write {
                 if let apps = data as? [AppModel] {
                     realm.add(apps, update: true)
+                    success(true)
+                }
+                
+                if let app = data as? AppModel {
+                    let user = realm.objects(UserModel.self).first
+                    user?.apps.append(app)
+                    success(true)
+                }
+                
+                if let user = data as? UserModel {
+                    realm.add(user, update: true)
                     success(true)
                 }
             }

@@ -2,7 +2,7 @@
 //  SectionTableViewController.swift
 //  Rappitest
 //
-//  Created by Momentum Lab 7 on 1/14/17.
+//  Created by Jyferson Colina on 1/14/17.
 //
 //
 
@@ -10,6 +10,7 @@ import UIKit
 import Spring
 import Kingfisher
 
+// MARK: ClassIdentifiers
 let kIdentifierSectionTable = "SectionTableViewController"
 
 class SectionTableViewController: UIViewController {
@@ -23,14 +24,18 @@ class SectionTableViewController: UIViewController {
     @IBOutlet weak var detailView: UIView!
     @IBOutlet weak var iTunesImage: UIImageView!
     @IBOutlet weak var freeLabel: UILabel!
+    @IBOutlet weak var dowloadButton: SpringButton!
     
     var appList: [AppModel]?
-    
+    let interactor = Interactor()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "\(appList!.first!.category)"
         // Register cell classes
         self.sectionTableView.register(UINib(nibName: kIdentenfierTableViewCell, bundle: nil), forCellReuseIdentifier: kIdentenfierTableViewCell)
+        
+        self.interactor.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -43,6 +48,12 @@ class SectionTableViewController: UIViewController {
 
     @IBAction func detailButtonTapped(_ sender: UIButton) {
         self.routeDetailView(appDetail: (self.appList?[(self.sectionTableView.indexPathForSelectedRow?.row)!])!)
+    }
+    @IBAction func dowloadButtonTapped(_ sender: SpringButton) {
+        if let index = self.sectionTableView.indexPathsForSelectedRows?.first, let appList = self.appList {
+            self.interactor.installApp(app: appList[index.row])
+            self.dowloadButton.isHidden = true
+        }
     }
     
     func animateTable() {
@@ -109,6 +120,7 @@ extension SectionTableViewController: UITableViewDelegate {
             self.nameLabel.text = app.name
             self.artistLabel.text = app.artist
             self.animate()
+            self.interactor.installedApp(app: app)
         }
         
     }
@@ -125,4 +137,11 @@ extension SectionTableViewController: UITableViewDelegate {
         return 50.0
     }
     
+}
+
+// MARK: InteractorDelegate
+extension SectionTableViewController: InteractorDelegate {
+    func installed(result: Bool) {
+        self.dowloadButton.isHidden = result
+    }
 }

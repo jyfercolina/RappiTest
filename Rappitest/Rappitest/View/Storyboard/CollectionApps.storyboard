@@ -47,7 +47,7 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gk4-bA-VFP">
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gk4-bA-VFP">
                                         <rect key="frame" x="184" y="76" width="48" height="24"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                         <color key="textColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -62,7 +62,7 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                         <state key="normal" title="Details">
-                                            <color key="titleColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -109,20 +109,34 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGU-7b-tL0" customClass="SpringButton" customModule="Spring">
+                                        <rect key="frame" x="957" y="88" width="35" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="JSw-OZ-W55"/>
+                                            <constraint firstAttribute="width" constant="35" id="Tpr-JN-IkF"/>
+                                        </constraints>
+                                        <state key="normal" image="icondownload"/>
+                                        <connections>
+                                            <action selector="installAppButtonTapped:" destination="twI-J9-eBe" eventType="touchUpInside" id="54H-Vb-hfM"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="0.98650323275862073" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.15699354421307687" green="0.15699354421307687" blue="0.15699354421307687" alpha="0.98650323275862073" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="F50-SY-xBw" firstAttribute="centerX" secondItem="uhd-My-LVY" secondAttribute="centerX" id="87e-A7-AKp"/>
                                     <constraint firstItem="pSW-D3-zFM" firstAttribute="leading" secondItem="vJW-Pn-Ocx" secondAttribute="trailing" constant="34" id="BjE-OD-sn9"/>
+                                    <constraint firstItem="Ff9-U0-PkH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gk4-bA-VFP" secondAttribute="trailing" constant="10" id="PbS-P1-SiY"/>
                                     <constraint firstItem="Ff9-U0-PkH" firstAttribute="centerY" secondItem="uhd-My-LVY" secondAttribute="centerY" id="WOe-WU-k6r"/>
                                     <constraint firstAttribute="trailing" secondItem="pwf-63-bgU" secondAttribute="trailing" constant="25" id="XGz-7W-Q0n"/>
                                     <constraint firstAttribute="height" constant="190" id="ZJk-qM-dE1"/>
                                     <constraint firstItem="F50-SY-xBw" firstAttribute="top" secondItem="vJW-Pn-Ocx" secondAttribute="bottom" constant="5" id="ZrU-8n-ZyC"/>
+                                    <constraint firstItem="pwf-63-bgU" firstAttribute="top" secondItem="yGU-7b-tL0" secondAttribute="bottom" constant="5" id="bC5-7j-yKz"/>
                                     <constraint firstItem="gk4-bA-VFP" firstAttribute="leading" secondItem="pSW-D3-zFM" secondAttribute="leading" id="bK9-qr-DaU"/>
                                     <constraint firstItem="gk4-bA-VFP" firstAttribute="top" secondItem="pSW-D3-zFM" secondAttribute="bottom" constant="10" id="e9l-Cg-KCL"/>
                                     <constraint firstItem="pwf-63-bgU" firstAttribute="bottom" secondItem="vJW-Pn-Ocx" secondAttribute="bottom" id="ffE-Kf-tDk"/>
                                     <constraint firstItem="Ff9-U0-PkH" firstAttribute="centerX" secondItem="uhd-My-LVY" secondAttribute="centerX" id="fnX-2a-blF"/>
                                     <constraint firstItem="vJW-Pn-Ocx" firstAttribute="leading" secondItem="uhd-My-LVY" secondAttribute="leading" constant="25" id="kIw-DR-gGz"/>
+                                    <constraint firstItem="yGU-7b-tL0" firstAttribute="centerX" secondItem="pwf-63-bgU" secondAttribute="centerX" id="lzj-ZU-cPp"/>
                                     <constraint firstItem="vJW-Pn-Ocx" firstAttribute="centerY" secondItem="uhd-My-LVY" secondAttribute="centerY" id="pKZ-tB-ClU"/>
                                     <constraint firstItem="pSW-D3-zFM" firstAttribute="top" secondItem="vJW-Pn-Ocx" secondAttribute="top" id="yGF-UJ-Qrj"/>
                                 </constraints>
@@ -169,6 +183,7 @@
                         <outlet property="detailView" destination="uhd-My-LVY" id="XXu-0I-KOV"/>
                         <outlet property="freeLabel" destination="pwf-63-bgU" id="WKl-zo-yYk"/>
                         <outlet property="iTunesImage" destination="Ff9-U0-PkH" id="C4s-fv-guY"/>
+                        <outlet property="installAppButton" destination="yGU-7b-tL0" id="1vs-vh-cay"/>
                         <outlet property="nameLabel" destination="pSW-D3-zFM" id="ESd-6a-Ghh"/>
                         <outlet property="sectionCollectionView" destination="gKI-J1-M7g" id="LzX-cH-VDF"/>
                     </connections>
@@ -202,14 +217,18 @@
                     <collectionView key="view" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" indicatorStyle="white" dataMode="prototypes" id="KVQ-6q-h7f">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.81808895420769234" green="0.81808895420769234" blue="0.81808895420769234" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1za-zr-1UP">
                             <size key="itemSize" width="130" height="182"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="headerReferenceSize" width="50" height="61"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells/>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="top" semanticContentAttribute="playback" id="d9a-ct-rEq">
+                            <rect key="frame" x="0.0" y="0.0" width="1024" height="61"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </collectionReusableView>
                         <connections>
                             <outlet property="dataSource" destination="XBJ-0X-2Ny" id="ylR-1f-xgh"/>
                             <outlet property="delegate" destination="XBJ-0X-2Ny" id="NFM-gj-NGA"/>
@@ -223,5 +242,6 @@
     </scenes>
     <resources>
         <image name="Itunes_logo" width="300" height="180"/>
+        <image name="icondownload" width="128" height="128"/>
     </resources>
 </document>

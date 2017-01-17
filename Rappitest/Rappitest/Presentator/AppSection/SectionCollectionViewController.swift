@@ -2,13 +2,14 @@
 //  SectionCollectionViewController.swift
 //  Rappitest
 //
-//  Created by Momentum Lab 7 on 1/14/17.
+//  Created by Jyferson Colina on 1/14/17.
 //
 //
 
 import UIKit
 import Spring
 
+// MARK: ClassIdentifiers
 let kIdentifierSectionCollection = "SectionCollectionViewController"
 
 class SectionCollectionViewController: UIViewController {
@@ -21,22 +22,27 @@ class SectionCollectionViewController: UIViewController {
     @IBOutlet weak var detailButton: SpringButton!
     @IBOutlet weak var iTunesImage: SpringImageView!
     @IBOutlet weak var freeLabel: UILabel!
+    @IBOutlet weak var installAppButton: SpringButton!
+    
+    var appList: [AppModel]?
+    let interactor = Interactor()
     
     let sectionInsets = UIEdgeInsets(top: 10.0, left: 10.0, bottom: 30.0, right: 10.0)
-    var appList: [AppModel]?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Top Free Application - \(appList!.first!.category)"
+        // Register cell classes
         self.sectionCollectionView.register(UINib(nibName: kIdentifierCollectionViewCell, bundle: nil), forCellWithReuseIdentifier: kIdentifierCollectionViewCell)
+        
+        self.interactor.delegate = self
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
-    
     
     @IBAction func detailButtonTapped(_ sender: SpringButton) {
         if let index = self.sectionCollectionView.indexPathsForSelectedItems?.first, let appList = self.appList {
@@ -44,6 +50,12 @@ class SectionCollectionViewController: UIViewController {
         }
     }
     
+    @IBAction func installAppButtonTapped(_ sender: SpringButton) {
+        if let index = self.sectionCollectionView.indexPathsForSelectedItems?.first, let appList = self.appList {
+            self.interactor.installApp(app: appList[index.row])
+            self.installAppButton.isHidden = true
+        }
+    }
 }
 
 // MARK: UICollectionViewDataSource
@@ -88,10 +100,12 @@ extension SectionCollectionViewController: UICollectionViewDelegate {
             self.nameLabel.text = app.name
             self.artistLabel.text = app.artist
             self.animate()
+            self.interactor.installedApp(app: app)
         }
     }
 }
 
+// MARK: UICollectionViewDelegateFlowLayout
 extension SectionCollectionViewController : UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -104,5 +118,12 @@ extension SectionCollectionViewController : UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return sectionInsets.left
+    }
+}
+
+// MARK: InteractorDelegate
+extension SectionCollectionViewController: InteractorDelegate {
+    func installed(result: Bool) {
+        self.installAppButton.isHidden = result
     }
 }

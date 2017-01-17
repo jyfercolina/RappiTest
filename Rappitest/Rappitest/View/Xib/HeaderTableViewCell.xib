@@ -23,8 +23,8 @@
                         <color key="textColor" red="0.15376602564102559" green="0.14411325146773371" blue="0.15033282477872534" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="highlightedColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Section" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LWu-cJ-P2i">
-                        <rect key="frame" x="57" y="6" width="45.5" height="16"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Section See All &gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LWu-cJ-P2i">
+                        <rect key="frame" x="57" y="6" width="101.5" height="16"/>
                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
                         <color key="textColor" red="0.08211137820512826" green="0.077276490523334698" blue="0.079848846726075229" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>

@@ -2,13 +2,14 @@
 //  Extension.swift
 //  Rappitest
 //
-//  Created by Momentum Lab 7 on 1/13/17.
+//  Created by Jyferson Colina on 1/13/17.
 //
 //
 
 import Foundation
 import UIKit
 
+// MARK: UIView
 extension UIView {
     
     @IBInspectable var cornerRadius: CGFloat {
@@ -47,4 +48,37 @@ extension UIView {
             tableView?.constant = 2
         })
     }
+}
+
+// MARK: UIViewController
+extension UIViewController {
+    
+    class func topViewController(controller: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
+        if let navigationController = controller as? UINavigationController {
+            return topViewController(controller: navigationController.visibleViewController)
+        }
+        if let tabController = controller as? UITabBarController {
+            if let selected = tabController.selectedViewController {
+                return topViewController(controller: selected)
+            }
+        }
+        if let presented = controller?.presentedViewController {
+            return topViewController(controller: presented)
+        }
+        return controller
+    }
+    
+    static func connectionOutside(controller: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) {
+        let vc = self.topViewController(controller: controller)
+        
+        let alert = UIAlertController(title: "Rappi", message: "Sorry! Your Internet Connection Has Failed. Working Local Mode.", preferredStyle: .alert)
+        
+        let oKAction = UIAlertAction(title: "OK", style: .destructive) { (UIAlertAction) -> Void in
+            
+        }
+        
+        alert.addAction(oKAction)
+        vc!.present(alert, animated: true, completion: nil)
+    }
+
 }

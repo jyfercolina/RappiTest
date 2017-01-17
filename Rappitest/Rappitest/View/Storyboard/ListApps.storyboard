@@ -14,13 +14,13 @@
                 <navigationController storyboardIdentifier="NavigationController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="H69-AJ-6Vj" customClass="NavigationController" customModule="Rappitest" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" systemItem="topRated" id="j3e-wd-u6X"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="uhk-NO-kvj">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="uhk-NO-kvj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="tintColor" red="0.85098039215686272" green="0.12941176470588237" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" red="0.85098039215686272" green="0.12941176470588237" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" red="0.82421950899400764" green="0.82788096348475027" blue="0.83100961538461537" alpha="1" colorSpace="calibratedRGB"/>
                         </textAttributes>
                     </navigationBar>
                     <connections>
@@ -165,16 +165,29 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vhQ-ye-QOD" customClass="SpringButton" customModule="Spring">
+                                        <rect key="frame" x="328" y="39" width="35" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="hJO-sj-TuN"/>
+                                            <constraint firstAttribute="width" constant="35" id="plQ-KU-BVL"/>
+                                        </constraints>
+                                        <state key="normal" image="icondownload"/>
+                                        <connections>
+                                            <action selector="dowloadButtonTapped:" destination="r25-Vl-2BQ" eventType="touchUpInside" id="tQn-y0-tYK"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.14072516025641024" green="0.14072516025641024" blue="0.14072516025641024" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.2024038461538461" green="0.2024038461538461" blue="0.2024038461538461" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="MJZ-WB-nPZ" firstAttribute="bottom" secondItem="5gW-2Z-08W" secondAttribute="bottom" id="54u-c2-wK1"/>
                                     <constraint firstItem="zSS-Nv-49N" firstAttribute="centerX" secondItem="yWS-iy-HiO" secondAttribute="centerX" id="6aP-oS-eB0"/>
                                     <constraint firstItem="5gW-2Z-08W" firstAttribute="leading" secondItem="yWS-iy-HiO" secondAttribute="leading" constant="20" id="6wr-tL-RrI"/>
+                                    <constraint firstItem="vhQ-ye-QOD" firstAttribute="centerX" secondItem="MJZ-WB-nPZ" secondAttribute="centerX" id="Bav-dV-5wX"/>
                                     <constraint firstAttribute="trailing" secondItem="MJZ-WB-nPZ" secondAttribute="trailing" constant="10" id="DbO-Ho-hkl"/>
                                     <constraint firstItem="5gW-2Z-08W" firstAttribute="top" secondItem="yWS-iy-HiO" secondAttribute="top" constant="15" id="Dn9-k2-bLz"/>
                                     <constraint firstItem="akA-Bd-j3B" firstAttribute="centerX" secondItem="yWS-iy-HiO" secondAttribute="centerX" id="FuJ-lO-dX4"/>
+                                    <constraint firstItem="MJZ-WB-nPZ" firstAttribute="top" secondItem="vhQ-ye-QOD" secondAttribute="bottom" constant="8" id="GnQ-Go-2QC"/>
                                     <constraint firstItem="pdz-3h-WkA" firstAttribute="leading" secondItem="5gW-2Z-08W" secondAttribute="trailing" constant="15" id="LPI-Rh-Zah"/>
                                     <constraint firstAttribute="height" constant="130" id="Nf8-Uy-GQQ"/>
                                     <constraint firstItem="GXh-S4-YFY" firstAttribute="top" secondItem="pdz-3h-WkA" secondAttribute="bottom" constant="5" id="ObO-uW-yqX"/>
@@ -211,6 +224,7 @@
                         <outlet property="artistLabel" destination="GXh-S4-YFY" id="DAl-y5-Dsl"/>
                         <outlet property="detailButton" destination="zSS-Nv-49N" id="abH-Hi-ays"/>
                         <outlet property="detailView" destination="yWS-iy-HiO" id="pcb-pM-0F1"/>
+                        <outlet property="dowloadButton" destination="vhQ-ye-QOD" id="qOT-We-4dD"/>
                         <outlet property="freeLabel" destination="MJZ-WB-nPZ" id="6wJ-Rt-RP7"/>
                         <outlet property="iTunesImage" destination="akA-Bd-j3B" id="z7q-ou-c52"/>
                         <outlet property="nameLabel" destination="pdz-3h-WkA" id="15A-NC-s5B"/>
@@ -462,5 +476,6 @@
     </scenes>
     <resources>
         <image name="Itunes_logo" width="300" height="180"/>
+        <image name="icondownload" width="128" height="128"/>
     </resources>
 </document>

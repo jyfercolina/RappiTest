@@ -2,18 +2,19 @@
 //  Interactor.swift
 //  Rappitest
 //
-//  Created by Momentum Lab 7 on 1/13/17.
+//  Created by Jyferson Colina on 1/13/17.
 //
 //
 
 import Foundation
 import RealmSwift
 
+// MARK: InteractorDelegate - Protocol
 @objc protocol InteractorDelegate: class {
     @objc optional func successEvent(success : Bool)
+    @objc optional func installed(result : Bool)
     @objc optional func currentUser(currentUser user: UserModel)
     @objc optional func reloadList(appList apps: [String : [AppModel]])
-    @objc optional func appDetail(appDetail app: AppModel)
 }
 
 class Interactor {
@@ -26,16 +27,42 @@ class Interactor {
         self.dataManager.fetchApps()
     }
     
+    func retrieveCurrentUser() {
+        self.dataManager.delegate = self
+        self.dataManager.fetchUserData()
+    }
+    
+    func installedApp(app: AppModel) {
+        self.dataManager.delegate = self
+        self.dataManager.filterApp(app: app)
+    }
+    
+    func installApp(app: AppModel) {
+        self.dataManager.delegate = self
+        self.dataManager.saveAppInstall(app: app)
+    }
+    
 }
 
+// MARK: Interactor - DataManagerDelegate.
 extension Interactor: DataManagerDelegate {
     func responseDataManager<T>(_ response: T) {
         if let listApps = response as? [AppModel], listApps.count > 0 {
             self.delegate?.reloadList!(appList: listApps.orderbyCategorys(apps: listApps))
         }
+        
+        if let currentUser =  response as? UserModel {
+            self.delegate?.currentUser!(currentUser: currentUser)
+        }
+        
+        if let count = response as? Int {
+            count == 1 ? self.delegate?.installed!(result: true) : self.delegate?.installed!(result: false)
+        }
     }
 }
 
+
+// MARK: Extensions
 extension Array {
     func orderbyCategorys(apps: [AppModel]) -> [String : [AppModel]] {
         var categorys: [String : [AppModel]] = [:]

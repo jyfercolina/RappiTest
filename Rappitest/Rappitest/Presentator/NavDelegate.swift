@@ -2,7 +2,7 @@
 //  NavDelegate.swift
 //  Rappitest
 //
-//  Created by Momentum Lab 7 on 1/16/17.
+//  Created by Jyferson Colina on 1/16/17.
 //
 //
 

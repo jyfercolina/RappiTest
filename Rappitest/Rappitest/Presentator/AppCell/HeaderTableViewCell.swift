@@ -2,12 +2,13 @@
 //  HeaderTableViewCell.swift
 //  Rappitest
 //
-//  Created by Momentum Lab 7 on 1/14/17.
+//  Created by Jyferson Colina on 1/14/17.
 //
 //
 
 import UIKit
 
+// MARK: HeaderIdentifiers
 let kIdentifierHeaderTableView = "HeaderTableViewCell"
 
 class HeaderTableViewCell: UITableViewCell {
@@ -25,7 +26,7 @@ class HeaderTableViewCell: UITableViewCell {
     }
     
     func titleHeader(title: String) {
-        self.title.text = title.capitalized
+        self.title.text = "\(title.capitalized)"
     }
     
 }

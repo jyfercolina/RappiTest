@@ -2,7 +2,7 @@
 //  Page3ViewController.swift
 //  Rappitest
 //
-//  Created by Momentum Lab 7 on 1/14/17.
+//  Created by Jyferson Colina on 1/14/17.
 //
 //
 
@@ -21,6 +21,7 @@ class Page3ViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        self.signInButton.isHidden = true
         self.animation()
     }
 
@@ -34,24 +35,18 @@ class Page3ViewController: UIViewController {
         self.iconImage.duration = 5.0
         self.iconImage.animate()
         self.goLabel.animation = "zoomOut"
-        self.goLabel.duration = 4.0
+        self.goLabel.duration = 3.0
         self.goLabel.animate()
-        self.signInButton.animation = "wobble"
-        self.signInButton.duration = 4.0
-        self.signInButton.animate()
+        self.goLabel.animateNext {
+            self.signInButton.isHidden = false
+            self.signInButton.animation = "morph"
+            self.signInButton.duration = 1.0
+            self.signInButton.repeatCount = 10
+            self.signInButton.animate()
+        }
     }
     
     @IBAction func siginButtonTapped(_ sender: UIButton) {
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

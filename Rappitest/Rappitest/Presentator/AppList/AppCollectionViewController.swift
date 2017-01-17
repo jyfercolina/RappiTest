@@ -2,20 +2,20 @@
 //  RappiCollectionViewController.swift
 //  Rappitest
 //
-//  Created by Momentum Lab 7 on 1/12/17.
+//  Created by Jyferson Colina on 1/12/17.
 //
 //
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
+
 
 class AppCollectionViewController: UICollectionViewController {
 
     var categorys : [String : [AppModel]] = [:]
     let interator = Interactor()
     var itemsPerRow: CGFloat = 4
-    let sectionInsets = UIEdgeInsets(top: 10.0, left: 10.0, bottom: 30.0, right: 10.0)
+    let sectionInsets = UIEdgeInsets(top: 5.0, left: 10.0, bottom: 5.0, right: 5.0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +26,7 @@ class AppCollectionViewController: UICollectionViewController {
         self.clearsSelectionOnViewWillAppear = true
         // Register cell classes
         self.collectionView!.register(UINib(nibName: kIdentifierCollectionViewCell, bundle: nil), forCellWithReuseIdentifier: kIdentifierCollectionViewCell)
+        self.collectionView!.register(UINib(nibName: kIdentifierHeaderCollectionView, bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: kIdentifierHeaderCollectionView)
     }
 
     override func didReceiveMemoryWarning() {
@@ -60,12 +61,28 @@ class AppCollectionViewController: UICollectionViewController {
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: (self.collectionView?.frame.width)!, height: 25)
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: kIdentifierHeaderCollectionView, for: indexPath as IndexPath) as! HeaderCollectionViewCell
+        let key = Array(self.categorys.keys)[indexPath.section]
+        header.titleHeader(title: key)
+        return header
+    }
+
+    
+    // MARK: UICollectionViewDelegate
+    
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         let key = Array(self.categorys.keys)[indexPath.section]
         let array = categorys[key]
         self.routeSectionView(appListSection: array!)
     }
+    
+    
 
 }
 

@@ -11,7 +11,7 @@
         <!--Rappi Page View Controller-->
         <scene sceneID="byL-YK-sqY">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="AjN-7D-aoC" customClass="RappiPageViewController" customModule="Rappitest" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="RappiPageViewController" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="AjN-7D-aoC" customClass="RappiPageViewController" customModule="Rappitest" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QsU-Tq-T6X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1118" y="14"/>
@@ -32,19 +32,19 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rappi" translatesAutoresizingMaskIntoConstraints="NO" id="ypn-4t-Ssw">
-                                <rect key="frame" x="137" y="161" width="100" height="100"/>
+                                <rect key="frame" x="137" y="147.5" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="Twz-Mn-hOY"/>
                                     <constraint firstAttribute="width" constant="100" id="Vp9-07-JM5"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¡Se presenta la oportunidad de trabajar en una Startup con la mejor puesta en marcha!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQw-n4-HLW">
-                                <rect key="frame" x="85" y="291" width="205" height="86"/>
+                                <rect key="frame" x="85" y="277.5" width="205" height="113.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="205" id="lJy-e0-oGw"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="18"/>
-                                <color key="textColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="19"/>
+                                <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="eyS-pO-BfA">
@@ -89,7 +89,7 @@
                                 <rect key="frame" x="15" y="15" width="39" height="37"/>
                             </pageControl>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appstore-1" translatesAutoresizingMaskIntoConstraints="NO" id="NuR-ux-MPc" customClass="SpringImageView" customModule="Spring">
-                                <rect key="frame" x="93" y="198.5" width="190" height="350"/>
+                                <rect key="frame" x="93" y="208.5" width="190" height="350"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="190" id="772-aC-1h0"/>
                                     <constraint firstAttribute="height" constant="350" id="Ir1-S8-FNM"/>
@@ -104,12 +104,12 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Desarrollando un modelo práctico de iTunes Apple, con la implementación de todos tus conocimientos." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KpN-pH-bzY">
-                                <rect key="frame" x="86" y="107.5" width="205" height="86"/>
+                                <rect key="frame" x="81" y="112.5" width="215" height="91"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="205" id="Q1d-08-0iz"/>
+                                    <constraint firstAttribute="width" constant="215" id="Q1d-08-0iz"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="18"/>
-                                <color key="textColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="19"/>
+                                <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -123,7 +123,7 @@
                             <constraint firstItem="t9v-zW-MTe" firstAttribute="leading" secondItem="Uh6-qo-P86" secondAttribute="leading" id="h9u-IG-nWV"/>
                             <constraint firstAttribute="trailing" secondItem="t9v-zW-MTe" secondAttribute="trailing" id="hoc-ZJ-HpS"/>
                             <constraint firstItem="KpN-pH-bzY" firstAttribute="centerX" secondItem="NuR-ux-MPc" secondAttribute="centerX" id="nlW-YV-YIV"/>
-                            <constraint firstItem="NuR-ux-MPc" firstAttribute="centerY" secondItem="Uh6-qo-P86" secondAttribute="centerY" constant="40" id="pc7-LY-K7l"/>
+                            <constraint firstItem="NuR-ux-MPc" firstAttribute="centerY" secondItem="Uh6-qo-P86" secondAttribute="centerY" constant="50" id="pc7-LY-K7l"/>
                             <constraint firstItem="t9v-zW-MTe" firstAttribute="top" secondItem="Uh6-qo-P86" secondAttribute="top" id="qOJ-7M-Rgx"/>
                         </constraints>
                     </view>
@@ -158,10 +158,6 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <color key="textColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="NO"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autohide" value="NO"/>
-                                </userDefinedRuntimeAttributes>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rappi2" translatesAutoresizingMaskIntoConstraints="NO" id="4i4-vx-NfM" customClass="SpringImageView" customModule="Spring">
                                 <rect key="frame" x="138" y="284" width="100" height="100"/>
@@ -183,37 +179,34 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgV-Ks-uIM" customClass="SpringButton" customModule="Spring">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tester Rappi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Uh-3T-Imy">
+                                <rect key="frame" x="135" y="392" width="106" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <color key="textColor" red="0.92941176470588238" green="0.82813741351994552" blue="0.85088124612178373" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgV-Ks-uIM" customClass="SpringButton" customModule="Spring">
                                 <rect key="frame" x="108" y="423" width="160" height="37"/>
-                                <color key="backgroundColor" red="0.84313725490196079" green="0.16078431372549021" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.84313725490196079" green="0.16078431372549021" blue="0.35686274509803922" alpha="0.81142241379310343" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="160" id="ILA-1c-LHe"/>
                                     <constraint firstAttribute="height" constant="37" id="aJp-WP-UqB"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                <size key="titleShadowOffset" width="5" height="5"/>
                                 <state key="normal" title="Sign In">
-                                    <color key="titleColor" red="0.20784313725490197" green="0.80392156862745101" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="0.77254901960784317" green="0.14901960784313725" blue="0.46274509803921571" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="7"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="NO"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autohide" value="NO"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="siginButtonTapped:" destination="v2y-pE-NDs" eventType="touchUpInside" id="q16-3V-kg4"/>
                                     <segue destination="vHV-Nv-A3A" kind="presentation" id="azJ-z2-eqg"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Rappi Tester" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Uh-3T-Imy">
-                                <rect key="frame" x="133.5" y="392" width="110.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                <color key="textColor" red="0.92941176470588238" green="0.12156862745098039" blue="0.050980392156862744" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -251,10 +244,10 @@
                     <tabBar key="tabBar" opaque="NO" contentMode="scaleToFill" translucent="NO" id="eSt-0E-gl9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="tintColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="barTintColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="selectedImageTintColor" red="0.19607843137254902" green="0.75686274509803919" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.14964178139256401" green="0.14964178139256401" blue="0.14964178139256401" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.15274674934128196" green="0.15274674934128196" blue="0.15274674934128196" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.17868825575153846" green="0.17868825575153846" blue="0.17868825575153846" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" red="1" green="0.98083491863037842" blue="0.95168938338021936" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="nbz-Kv-LWY" kind="relationship" relationship="viewControllers" id="HHq-9V-lEF"/>
