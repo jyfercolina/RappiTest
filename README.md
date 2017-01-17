@@ -14,4 +14,4 @@ Abrir el .xcworkspace
 Buil, Run Project.
 
 #iPhone Version
-![alt tag](https://drive.google.com/open?id=0B1kXFCrXEfCQR0pHWkRZckVYUEE)
+![alt tag](https://github.com/jyfercolina/RappiImages/blob/master/RappiTestCapture/Screen%20Shot%202017-01-17%20at%209.24.51%20AM.png)
