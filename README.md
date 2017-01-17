@@ -16,11 +16,15 @@ En caso de conflicto de con la version de swift, ir a Targets -> RappiTest -> Bu
 Presento al poderoso Cocoa Pods https://cocoapods.org/ instalar si aún no lo has usado.
 
 #Instalación
-git clone 
+git clone
+
 cd RappiTest/RappiTest
+
 pod install
+
 Abrir el .xcworkspace
-Buil, Run Project.
+
+Build, Run Project.
 
 #iPhone version
 ![alt tag](https://github.com/jyfercolina/RappiImages/blob/master/RappiTestCapture/Screen%20Shot%202017-01-17%20at%209.24.51%20AM.png) ![alt tag](https://github.com/jyfercolina/RappiImages/blob/master/RappiTestCapture/Screen%20Shot%202017-01-17%20at%209.24.56%20AM.png)
