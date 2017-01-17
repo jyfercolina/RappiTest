@@ -2,7 +2,8 @@
 Realizar la construcción de vistas de un catálogo conformado por una lista de aplicaciones, lo esperado es mostrarlas todas con su respectivo icono y al hacer [tap] abra el detalle.
 
 RappiTest Posee una arquictectura VIPER (view-Interactor-Presentator-Entity-Router) esta tiene implementado una extension para la comunicacion entre la lógica de la applicación y los servicios locales o remotos. DataManager - Service.
-Está conformado por un PageController principal el cual permite ingresar con un usuario por defecto para tener servicio del top 20 de las apps free de iTunes. Posee servicio local ya que en la llamada de los datos guarda el response de las app y permite una interación con el usuario posterior al primer login sin servicios de intenet. Igualmente maneja otro ejemplo de data local con la misma libreria POD Real https://realm.io/docs/get-started/ donde se guarda las apps "instaladas por el usuario" en el modelo UserModel.
+
+Conformada por un PageController principal el cual permite ingresar con un usuario por defecto para tener servicio del top 20 de las apps free de iTunes. Posee servicio local ya que en la llamada de los datos guarda el response de las app y permite una interación con el usuario posterior al primer login sin servicios de intenet. Igualmente maneja otro ejemplo de data local con la misma libreria POD Real https://realm.io/docs/get-started/ donde se guarda las apps "instaladas por el usuario" en el modelo UserModel.
 
 RappiTest Posee 3 vistas principal (Lista de secciones - Sección - Detalle) en conjunto con otras para una mejor interacción con el usuario y demostración de algunos otros conocimientos. Tambien un conjunto de animaciones de vista y transiciones.
 
