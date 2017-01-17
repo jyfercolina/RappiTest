@@ -12,3 +12,6 @@ cd RappiTest/RappiTest
 pod install
 Abrir el .xcworkspace
 Buil, Run Project.
+
+#iPhone Version
+![alt tag](https://drive.google.com/open?id=0B1kXFCrXEfCQR0pHWkRZckVYUEE)
