@@ -93,6 +93,7 @@ extension SignOutViewController : UICollectionViewDelegateFlowLayout {
 extension SignOutViewController : InteractorDelegate {
     func currentUser(currentUser user: UserModel) {
         self.appList = user.apps
+        self.appsCollectionView.reloadData()
         self.countApps.text = "\(user.apps.count)"
     }
 }
